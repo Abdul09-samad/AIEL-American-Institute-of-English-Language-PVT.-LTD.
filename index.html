@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIEL Balaganj | World's Most Elite Spoken English Institute</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google VIP Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            100: '#fef08a',
+                            300: '#fde047',
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                            700: '#a16207',
+                        },
+                        cyber: {
+                            800: '#0b132b',
+                            900: '#070b19',
+                            950: '#03050d',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Outfit"', 'sans-serif'],
+                        heading: ['"Space Grotesk"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #03050d;
+            color: #f8fafc;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(250, 204, 21, 0.2);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(250, 204, 21, 0.6);
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 30px 60px rgba(250, 204, 21, 0.2);
+        }
+
+        .gold-glow-text {
+            text-shadow: 0 0 25px rgba(250, 204, 21, 0.6), 0 0 50px rgba(250, 204, 21, 0.2);
+        }
+
+        .gold-btn {
+            background: linear-gradient(135deg, #facc15 0%, #ca8a04 100%);
+            box-shadow: 0 10px 30px rgba(202, 138, 4, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .gold-btn:hover {
+            box-shadow: 0 15px 40px rgba(250, 204, 21, 0.7);
+            transform: translateY(-3px) scale(1.02);
+        }
+
+        .whatsapp-glow-btn {
+            background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-glow-btn:hover {
+            box-shadow: 0 15px 40px rgba(16, 185, 129, 0.6);
+            transform: translateY(-2px);
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #03050d; }
+        ::-webkit-scrollbar-thumb { background: #ca8a04; border-radius: 4px; }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- DYNAMIC BACKGROUND CANVAS -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- CONTENT WRAPPER -->
+    <div class="relative z-10">
+
+        <!-- TOP VIP BANNER -->
+        <div class="bg-gradient-to-r from-gold-600 via-gold-400 to-gold-600 text-cyber-950 py-2.5 px-4 text-xs sm:text-sm font-black tracking-wider border-b border-gold-300/40 shadow-lg">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2 text-center md:text-left">
+                <div class="flex items-center gap-2 justify-center flex-wrap">
+                    <span class="bg-cyber-950 text-gold-400 text-[10px] uppercase font-black px-3 py-0.5 rounded-full tracking-widest animate-pulse">WORLD CLASS ACADEMY</span>
+                    <span class="bg-cyber-950 text-gold-300 font-black px-3 py-1 rounded-lg text-xs sm:text-sm shadow-md border border-gold-400/30">
+                        मात्र 90 दिनों में अंग्रेज़ी बोलना सीखें
+                    </span>
+                    <span class="hidden lg:inline opacity-80">| 550+ शहरों में लाइफटाइम फ्री एक्सेस</span>
+                </div>
+                <div class="flex items-center gap-4 text-xs font-black">
+                    <a href="tel:7800840900" class="hover:underline flex items-center gap-1.5">
+                        <i class="fa-solid fa-phone"></i> Helpline: 7800840900
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVIGATION BAR -->
+        <nav class="sticky top-0 z-40 bg-cyber-950/90 backdrop-blur-2xl border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20 sm:h-24">
+                    
+                    <!-- LOGO -->
+                    <a href="#" class="flex items-center gap-2 sm:gap-4 group">
+                        <div class="px-2.5 py-1.5 sm:px-3 sm:py-2 bg-white rounded-xl border-2 border-gold-400 group-hover:border-gold-300 transition-all shadow-2xl">
+                            <img 
+                                src="American logo.jpg" 
+                                alt="American Institute of English Language Pvt. Ltd." 
+                                class="h-8 sm:h-12 w-auto object-contain"
+                                onerror="this.onerror=null; this.src='https://via.placeholder.com/240x70?text=AMERICAN+AIEL';"
+                            />
+                        </div>
+                        <span class="bg-gold-500/10 border border-gold-500/30 text-gold-400 text-[10px] font-black px-2 py-0.5 sm:px-3 sm:py-1 rounded-xl uppercase tracking-widest">
+                            BALAGANJ
+                        </span>
+                    </a>
+
+                    <!-- DESKTOP NAV LINKS -->
+                    <div class="hidden lg:flex items-center gap-5 text-sm font-bold text-slate-300 tracking-wide">
+                        <a href="#about" class="hover:text-gold-400 transition-colors">Why AIEL</a>
+                        <a href="#course-details" class="hover:text-gold-400 transition-colors">Course Content</a>
+                        <a href="#founder" class="hover:text-gold-400 transition-colors">Founder</a>
+                        <a href="#director" class="hover:text-gold-400 transition-colors">Director</a>
+                        <a href="#seminar" class="hover:text-gold-400 transition-colors">Seminar & Trophies</a>
+                        <a href="#trip" class="hover:text-gold-400 transition-colors">Group Trip</a>
+                        <a href="#batches" class="hover:text-gold-400 transition-colors">Batches</a>
+                        <a href="#reviews" class="text-gold-400 font-extrabold flex items-center gap-1 hover:text-gold-300 transition-colors"><i class="fa-solid fa-star text-xs"></i> Reviews</a>
+                        <a href="#gallery" class="text-gold-400 font-extrabold flex items-center gap-1 hover:text-gold-300 transition-colors"><i class="fa-solid fa-images text-xs"></i> Gallery</a>
+                    </div>
+
+                    <!-- DESKTOP RIGHT CALL -->
+                    <div class="hidden sm:flex items-center">
+                        <a href="tel:7800840900" class="text-xs text-gold-400 font-bold border border-gold-400/40 px-4 py-2 rounded-xl bg-gold-400/10 hover:bg-gold-400/20 transition-all">
+                            <i class="fa-solid fa-phone mr-1"></i> Call Now
+                        </a>
+                    </div>
+
+                    <!-- MOBILE HAMBURGER BUTTON -->
+                    <div class="flex lg:hidden items-center">
+                        <button onclick="toggleMobileMenu()" class="p-2.5 rounded-xl bg-white/5 border border-gold-400/40 text-gold-400 hover:bg-gold-400/10 transition-all focus:outline-none">
+                            <i id="menuIcon" class="fa-solid fa-bars text-xl"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- MOBILE DROPDOWN MENU CONTAINER -->
+            <div id="mobileMenu" class="hidden lg:hidden bg-cyber-950/95 border-b border-gold-400/30 px-4 pt-3 pb-6 space-y-3 font-bold text-sm text-slate-200">
+                <a href="#about" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-white/5">Why AIEL</a>
+                <a href="#course-details" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-white/5">Course Content</a>
+                <a href="#founder" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-white/5">Founder's Message</a>
+                <a href="#director" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-white/5">Director's Message</a>
+                <a href="#seminar" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-white/5">Seminar & 5 Trophies</a>
+                <a href="#trip" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-white/5">Group Trip</a>
+                <a href="#batches" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-white/5">Batches</a>
+                <a href="#reviews" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg bg-gold-400/10 text-gold-400 border border-gold-400/20"><i class="fa-solid fa-star mr-2"></i> Student Reviews</a>
+                <a href="#gallery" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg bg-gold-400/10 text-gold-400 border border-gold-400/20"><i class="fa-solid fa-images mr-2"></i> Gallery</a>
+                <div class="pt-2">
+                    <a href="tel:7800840900" class="block w-full text-center gold-btn text-cyber-950 py-3 rounded-xl font-black text-xs uppercase tracking-wider">
+                        <i class="fa-solid fa-phone mr-1"></i> Call 7800840900
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- HERO SECTION WITH EXPANDED LOGO & TEXT RIGHT BELOW IT -->
+        <section id="about" class="relative py-16 lg:py-24 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-black uppercase tracking-widest">
+                            <span class="w-2.5 h-2.5 rounded-full bg-gold-400 animate-ping"></span>
+                            <span>Balaganj Center, Lucknow &bull; Estd. 1991 ©</span>
+                        </div>
+
+                        <!-- FULL-WIDTH EXTENDED LOGO BOX REACHING TOWARDS ENQUIRY BOX -->
+                        <div class="w-full pt-2">
+                            <div class="p-4 sm:p-6 bg-white rounded-3xl w-full border-2 border-gold-400/70 shadow-2xl transition-transform hover:scale-[1.02] duration-300 flex items-center justify-center">
+                                <img 
+                                    src="American1.jpg" 
+                                    alt="American Institute of English Language Pvt. Ltd." 
+                                    class="w-full h-auto max-h-36 sm:max-h-48 md:max-h-56 object-contain mx-auto"
+                                    onerror="this.onerror=null; this.src='American.jpg';"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- TEXT CONTENT WRITE RIGHT BELOW THE BIG LOGO -->
+                        <div class="space-y-3 pt-2">
+                            <p class="text-slate-200 text-base sm:text-xl font-medium leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                                Learn speaking english from the experienced mentors. Dive in deep, organic methods of learning English Speaking Course.
+                            </p>
+                            
+                            <div class="bg-gold-400/10 border-l-4 border-gold-400 p-4 rounded-r-2xl max-w-2xl mx-auto lg:mx-0 text-left">
+                                <h3 class="text-xl sm:text-3xl font-black text-white">
+                                    Speak English Confidently in Just 90 HRS
+                                </h3>
+                                <p class="text-gold-300 text-base sm:text-lg italic font-semibold mt-1">
+                                    Without the Hassle of Translation
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- MAIN HEADINGS -->
+                        <h1 class="font-heading text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight pt-2">
+                            Master Fluent English in <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-gold-400 to-amber-500 gold-glow-text">Just 90 Days</span>
+                        </h1>
+
+                        <p class="text-slate-300 text-sm sm:text-base font-light leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            Transform your communication, crack tough interviews, and gain <strong class="text-white font-bold">Lifetime Free Access across 550+ cities in India</strong>. Founded by <strong class="text-gold-400 font-extrabold underline decoration-gold-500/50 decoration-2">Dr. Vikram P. Lamba</strong>.
+                        </p>
+
+                        <div class="grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0">
+                            <div class="glass-card p-4 rounded-2xl text-center">
+                                <div class="text-gold-400 text-lg sm:text-xl font-black mb-1"><i class="fa-solid fa-stopwatch"></i> 90 Days</div>
+                                <div class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Fast Track</div>
+                            </div>
+                            <div class="glass-card p-4 rounded-2xl text-center">
+                                <div class="text-gold-400 text-lg sm:text-xl font-black mb-1"><i class="fa-solid fa-microphone-lines"></i> Saturday</div>
+                                <div class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Podium Class</div>
+                            </div>
+                            <div class="glass-card p-4 rounded-2xl text-center">
+                                <div class="text-gold-400 text-lg sm:text-xl font-black mb-1"><i class="fa-solid fa-trophy"></i> 5 Trophies</div>
+                                <div class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Grand Seminar</div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 pt-2">
+                            <button onclick="openModal('enquiryModal')" class="w-full sm:w-auto gold-btn text-cyber-950 px-9 py-4 rounded-2xl font-black text-base flex items-center justify-center gap-3">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                                <span>Enquire via WhatsApp</span>
+                            </button>
+                            <a href="tel:7800840900" class="w-full sm:w-auto bg-white/5 hover:bg-white/10 text-white border border-white/20 px-8 py-4 rounded-2xl font-bold text-base transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-phone text-gold-400"></i> Call 7800840900
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5">
+                        <!-- ENQUIRY SECTION BOX -->
+                        <div class="glass-card p-8 rounded-3xl relative border-t-4 border-gold-400 shadow-2xl">
+                            <div class="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
+                                <div>
+                                    <span class="text-xs font-bold text-gold-400 uppercase tracking-widest"><i class="fa-solid fa-paper-plane"></i> Dual Connect (Email & WhatsApp)</span>
+                                    <h2 class="text-2xl font-black text-white mt-1">Book Classes Directly</h2>
+                                </div>
+                                <span class="bg-gold-400/10 text-gold-400 border border-gold-400/30 text-[10px] font-black px-3 py-1 rounded-full uppercase">Instant</span>
+                            </div>
+
+                            <form onsubmit="handleDualSubmission(event, 'heroName', 'heroPhone', 'heroBatch', 'Direct Class Admission')" class="space-y-5">
+                                <input type="hidden" id="hero_access_key" value="d74b7243-31d5-484e-8d06-4fa53de54893">
+
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Your Full Name</label>
+                                    <input type="text" id="heroName" required placeholder="e.g. Rahul Sharma" class="w-full bg-cyber-950/80 border border-white/15 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-gold-400 transition-colors">
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Mobile Number</label>
+                                    <input type="tel" id="heroPhone" pattern="[0-9]{10}" required placeholder="10-digit number" class="w-full bg-cyber-950/80 border border-white/15 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-gold-400 transition-colors">
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Preferred Batch Timing</label>
+                                    <select id="heroBatch" class="w-full bg-cyber-950/80 border border-white/15 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-gold-400 transition-colors">
+                                        <option value="08:00 AM - 09:30 AM">08:00 AM - 09:30 AM (Morning)</option>
+                                        <option value="09:30 AM - 11:00 AM">09:30 AM - 11:00 AM (Morning)</option>
+                                        <option value="03:00 PM - 04:30 PM">03:00 PM - 04:30 PM (Afternoon)</option>
+                                        <option value="05:30 PM - 07:00 PM">05:30 PM - 07:00 PM (Evening)</option>
+                                        <option value="07:00 PM - 08:30 PM">07:00 PM - 08:30 PM (Last Evening Batch)</option>
+                                    </select>
+                                </div>
+
+                                <button type="submit" id="heroBtn" class="w-full gold-btn text-cyber-950 py-4 rounded-xl font-extrabold text-sm flex justify-center items-center gap-2">
+                                    <i class="fa-solid fa-paper-plane text-base"></i> Send To Email & WhatsApp
+                                </button>
+
+                                <p class="text-[11px] text-slate-400 text-center">
+                                    Balaganj Center: Hardoi Road, Lucknow
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FOUNDER'S MESSAGE SECTION -->
+        <section id="founder" class="py-24 relative border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="glass-card rounded-3xl p-8 sm:p-14 border border-gold-400/30 relative overflow-hidden">
+                    
+                    <div class="text-center mb-10">
+                        <span class="text-xs font-black text-gold-400 uppercase tracking-widest bg-gold-400/10 border border-gold-400/30 px-4 py-2 rounded-full inline-block">
+                            <i class="fa-solid fa-crown mr-1"></i> Founder's Vision
+                        </span>
+                        <h2 class="text-3xl sm:text-5xl font-black text-white mt-4">
+                            Founder Of American
+                        </h2>
+                        <div class="h-4"></div>
+                        <h3 class="text-xl sm:text-3xl font-extrabold text-gold-400 tracking-wider">
+                            Dr. Vikram P. Lamba
+                        </h3>
+                    </div>
+
+                    <div class="grid lg:grid-cols-12 gap-10 items-center">
+                        
+                        <!-- DR. VIKRAM P. LAMBA PHOTO -->
+                        <div class="lg:col-span-5 text-center">
+                            <div class="relative inline-block w-full max-w-sm">
+                                <div class="p-3 rounded-3xl bg-gradient-to-br from-gold-400 via-amber-500 to-gold-600 shadow-2xl">
+                                    <div class="bg-cyber-950 p-4 rounded-[22px] text-center">
+                                        <div class="relative overflow-hidden rounded-2xl border-2 border-gold-400/40 mb-4 bg-cyber-900 group">
+                                            <img 
+                                                src="vikram-lamba.jpg" 
+                                                alt="Dr. Vikram P. Lamba - Founder of AIEL" 
+                                                class="w-full h-80 sm:h-96 object-cover object-top transition-transform duration-500 group-hover:scale-105 cursor-pointer"
+                                                onclick="openImageViewer(this.src, 'Dr. Vikram P. Lamba - Founder')"
+                                                onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Dr+Vikram+Lamba&background=ca8a04&color=fff&size=400';"
+                                            />
+                                        </div>
+                                        <h4 class="text-xl font-black text-white tracking-wide">DR. VIKRAM P. LAMBA</h4>
+                                        <p class="text-xs text-gold-400 font-black uppercase tracking-widest mt-1">Founder Of American</p>
+                                        <p class="text-xs text-slate-400 mt-1">American Institute of English Language Pvt. Ltd.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FOUNDER MESSAGE CONTENT -->
+                        <div class="lg:col-span-7 space-y-6">
+                            <div class="space-y-6 text-slate-200 text-base sm:text-lg leading-relaxed font-light text-justify">
+                                <p>
+                                    I personally thank you for manifesting interest in AIEL'S revolutionary concept of English teaching.
+                                </p>
+                                <p>
+                                    Your decision to learn English through us is a smart step in the direction. You will appreciate that, whether you are serviceman, professional , housewife, businessman , sales representative , media person , student preparing for MEDIA/CALL CENTRES/IELTS/TOEFL or going abroad your interaction with English is a prerequisite.
+                                </p>
+                                <p>
+                                    As you move ahead in life you will find it difficult to do without English, and will realize the importance of this language in each & every field. So be smart and make your move today.
+                                </p>
+                                <p class="font-semibold text-gold-300 pt-2">
+                                    With warm regards & best wishes.
+                                </p>
+                            </div>
+                            
+                            <div class="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div>
+                                    <div class="text-lg font-black text-gold-400">Dr. Vikram P. Lamba</div>
+                                    <div class="text-xs text-slate-400 uppercase tracking-widest">Founder Of American Institute Of English Language Pvt. Ltd.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIRECTOR'S MESSAGE SECTION (MOIN KHAN) -->
+        <section id="director" class="py-24 relative border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="glass-card rounded-3xl p-8 sm:p-14 border border-gold-400/30 relative overflow-hidden bg-cyber-900/60">
+                    
+                    <div class="text-center mb-10">
+                        <span class="text-xs font-black text-gold-400 uppercase tracking-widest bg-gold-400/10 border border-gold-400/30 px-4 py-2 rounded-full inline-block">
+                            <i class="fa-solid fa-user-tie mr-1"></i> Managing Director Message
+                        </span>
+                        <h2 class="text-3xl sm:text-5xl font-black text-white mt-4">
+                            Managing Director (Balaganj Lucknow)
+                        </h2>
+                        <div class="h-4"></div>
+                        <h3 class="text-xl sm:text-3xl font-extrabold text-gold-400 tracking-wider">
+                            Moin Khan
+                        </h3>
+                    </div>
+
+                    <div class="grid lg:grid-cols-12 gap-10 items-center">
+                        
+                        <!-- MANAGING DIRECTOR PHOTO -->
+                        <div class="lg:col-span-5 text-center">
+                            <div class="relative inline-block w-full max-w-sm">
+                                <div class="p-3 rounded-3xl bg-gradient-to-br from-gold-400 via-amber-500 to-gold-600 shadow-2xl">
+                                    <div class="bg-cyber-950 p-4 rounded-[22px] text-center">
+                                        <div class="relative overflow-hidden rounded-2xl border-2 border-gold-400/40 mb-4 bg-cyber-900 group">
+                                            <img 
+                                                src="Moin Sir AIEL.jpg" 
+                                                alt="Moin Khan - Managing Director AIEL Balaganj Lucknow" 
+                                                class="w-full h-80 sm:h-96 object-cover object-top transition-transform duration-500 group-hover:scale-105 cursor-pointer"
+                                                onclick="openImageViewer(this.src, 'Moin Khan - Managing Director')"
+                                                onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Moin+Khan&background=ca8a04&color=fff&size=400';"
+                                            />
+                                        </div>
+                                        <h4 class="text-xl font-black text-white tracking-wide">MOIN KHAN</h4>
+                                        <p class="text-xs text-gold-400 font-black uppercase tracking-widest mt-1">Managing Director</p>
+                                        <p class="text-xs text-slate-400 mt-1">AIEL Balaganj Lucknow Branch</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MD INSPIRING MESSAGE CONTENT -->
+                        <div class="lg:col-span-7 space-y-6">
+                            <div class="space-y-6 text-slate-200 text-base sm:text-lg leading-relaxed font-light text-justify">
+                                <p class="text-xl font-extrabold text-white">
+                                    "Your Stage Confidence is Our First Priority at AIEL Balaganj!"
+                                </p>
+                                <p>
+                                    Dear Students & Aspirants of Lucknow, welcome to the Balaganj branch of American Institute of English Language Pvt. Ltd. Under my guidance as Managing Director, we ensure that every student who enters our premises transforms into a bold, articulate, and fluent speaker.
+                                </p>
+                                <p>
+                                    We go far beyond textbooks—every Saturday is strictly reserved for stage podium practice, extempore speeches, and debate sessions. Our mission in Balaganj is to remove stage fear permanently and open doors to global opportunities for you!
+                                </p>
+                                <p class="font-semibold text-gold-300">
+                                    Join us today and feel the difference from Day One!
+                                </p>
+                            </div>
+
+                            <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div>
+                                    <div class="text-lg font-black text-gold-400">Moin Khan</div>
+                                    <div class="text-xs text-slate-400 uppercase tracking-widest">Managing Director &bull; AIEL Balaganj Lucknow</div>
+                                </div>
+                                <a href="https://wa.me/917800840900?text=Hi%20Director%20Sir,%20I%20want%20to%20enquire%20about%20the%20English%20Course" target="_blank" class="whatsapp-glow-btn text-white px-6 py-3.5 rounded-xl text-xs font-bold flex items-center gap-2">
+                                    <i class="fa-brands fa-whatsapp text-base"></i> Connect with Moin Sir
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEMINAR & TROPHIES SECTION -->
+        <section id="seminar" class="py-20 relative border-t border-white/10 bg-cyber-900/40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <span class="text-xs font-black text-gold-400 uppercase tracking-widest bg-gold-400/10 border border-gold-400/30 px-3.5 py-1.5 rounded-full">
+                        <i class="fa-solid fa-trophy mr-1"></i> Grand Seminar & Competition
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-black text-white mt-2">5 Trophies Seminar & Rounds</h2>
+                    <p class="text-slate-400 text-sm">Students can participate in the Grand Seminar by paying the seminar registration fee and compete for 5 prestigious trophies across 2 competitive rounds.</p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                    
+                    <!-- SEMINAR ROUND 1 -->
+                    <div class="glass-card p-8 rounded-3xl border border-gold-400/30 space-y-5">
+                        <div class="flex items-center gap-3 pb-4 border-b border-white/10">
+                            <div class="w-12 h-12 bg-gold-400/10 text-gold-400 rounded-2xl flex items-center justify-center text-xl font-black border border-gold-400/30">
+                                R1
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-black text-white">Seminar Round 1</h3>
+                                <p class="text-xs text-gold-400 font-semibold">Assigned Topic Speech Presentation</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            In Round 1, participating students are given specific topics in advance. Students have to deliver their speech confidently on the stage in front of honorable judges, special guests, and fellow participants.
+                        </p>
+                        <div class="bg-white/5 p-4 rounded-xl border border-white/10 text-xs text-slate-300 space-y-2">
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold-400"></i> Advance Topic Allotted</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold-400"></i> Stage Performance in front of Judges & Guests</div>
+                        </div>
+                    </div>
+
+                    <!-- SEMINAR ROUND 2 -->
+                    <div class="glass-card p-8 rounded-3xl border border-gold-400/30 space-y-5">
+                        <div class="flex items-center gap-3 pb-4 border-b border-white/10">
+                            <div class="w-12 h-12 bg-amber-500/10 text-amber-400 rounded-2xl flex items-center justify-center text-xl font-black border border-amber-500/30">
+                                R2
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-black text-white">Seminar Round 2</h3>
+                                <p class="text-xs text-amber-400 font-semibold">Random Topic Extempore Challenge</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            In Round 2, shortlisted students face the ultimate test of spontaneity. Students have a **random topic** given on the spot and must speak fluently on stage in front of judges, guests, and audience.
+                        </p>
+                        <div class="bg-white/5 p-4 rounded-xl border border-white/10 text-xs text-slate-300 space-y-2">
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400"></i> Spot / Random Topic Challenge</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400"></i> Evaluated on Spontaneity & Stage Presence</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 5 TROPHIES SHOWCASE & SEMINAR FEE -->
+                <div class="glass-card p-8 sm:p-10 rounded-3xl border border-gold-400/40 text-center space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-gold-400/10 text-gold-400 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest border border-gold-400/30">
+                        <i class="fa-solid fa-award"></i> 5 Prestigious Trophies Awarded
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl font-black text-white">Compete & Win Big!</h3>
+                    <p class="text-slate-300 text-sm max-w-2xl mx-auto leading-relaxed">
+                        Students are required to pay the specified Seminar Participation Fee to register and compete for the <strong>5 Trophies</strong> awarded to top performers after rigorous evaluation by expert judges.
+                    </p>
+                    <button onclick="openModal('enquiryModal')" class="gold-btn text-cyber-950 px-8 py-3.5 rounded-xl font-black text-sm uppercase tracking-wider inline-flex items-center gap-2">
+                        <i class="fa-solid fa-pen-to-square"></i> Register For Seminar
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- GROUP TRIP SECTION -->
+        <section id="trip" class="py-20 relative border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="glass-card rounded-3xl p-8 sm:p-14 border border-gold-400/30 relative overflow-hidden bg-gradient-to-r from-cyber-900 via-cyber-950 to-cyber-900">
+                    <div class="grid lg:grid-cols-12 gap-10 items-center">
+                        <div class="lg:col-span-5 space-y-4">
+                            <span class="text-xs font-black text-emerald-400 uppercase tracking-widest bg-emerald-500/10 border border-emerald-500/30 px-3.5 py-1.5 rounded-full inline-block">
+                                <i class="fa-solid fa-bus mr-1"></i> Student Excursion
+                            </span>
+                            <h2 class="text-3xl sm:text-4xl font-black text-white">AIEL Exclusive Group Trip</h2>
+                            <p class="text-xs text-slate-400 uppercase tracking-wider font-bold">Post-Course Celebration & Networking</p>
+                        </div>
+                        <div class="lg:col-span-7 space-y-6 text-slate-300 text-sm sm:text-base leading-relaxed">
+                            <p>
+                                Upon successfully completing the 90-day spoken English course at AIEL Balaganj, students get the exciting opportunity to join our exclusive batch group trip!
+                            </p>
+                            <div class="bg-white/5 p-5 rounded-2xl border border-white/10 space-y-3">
+                                <div class="text-gold-400 font-bold text-sm flex items-center gap-2">
+                                    <i class="fa-solid fa-ticket"></i> Group Trip Payment Guidelines:
+                                </div>
+                                <p class="text-xs text-slate-300">
+                                    Students have to pay the respective trip amount separately to join the excursion. This covers travel, accommodation, and group activities organized for the batch after course completion.
+                                </p>
+                            </div>
+                            <div class="pt-2">
+                                <button onclick="openModal('enquiryModal')" class="whatsapp-glow-btn text-white px-7 py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider inline-flex items-center gap-2">
+                                    <i class="fa-brands fa-whatsapp"></i> Enquire About Next Trip Fee
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COURSE CONTENT & SPECIAL FEATURES SECTION -->
+        <section id="course-details" class="py-20 relative border-t border-white/10 bg-cyber-900/40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <span class="text-xs font-black text-gold-400 uppercase tracking-widest bg-gold-400/10 border border-gold-400/30 px-3.5 py-1.5 rounded-full">
+                        Complete Personality Grooming & Enhancement
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-black text-white mt-2">Comprehensive Course Curriculum</h2>
+                    <p class="text-slate-400 text-sm">Everything you need to master English fluency, stage performance, and professional etiquette.</p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-8">
+                    
+                    <div class="glass-card p-8 rounded-3xl border border-gold-400/20 relative space-y-6">
+                        <div class="flex items-center gap-3 pb-4 border-b border-white/10">
+                            <div class="w-12 h-12 bg-gold-400/10 text-gold-400 rounded-2xl flex items-center justify-center text-2xl border border-gold-400/30">
+                                <i class="fa-solid fa-book-open"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-black text-white">Course Content</h3>
+                                <p class="text-xs text-gold-400 font-semibold">Core Language Training Modules</p>
+                            </div>
+                        </div>
+
+                        <ul class="grid sm:grid-cols-2 gap-3 text-sm text-slate-300">
+                            <li class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/5"><i class="fa-solid fa-circle-check text-gold-400 text-xs"></i> Theory Classes</li>
+                            <li class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/5"><i class="fa-solid fa-circle-check text-gold-400 text-xs"></i> Personal Conversation</li>
+                            <li class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/5"><i class="fa-solid fa-circle-check text-gold-400 text-xs"></i> Slangs & Handy Sentences</li>
+                            <li class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/5"><i class="fa-solid fa-circle-check text-gold-400 text-xs"></i> Correct & Right Pronunciation</li>
+                            <li class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/5"><i class="fa-solid fa-circle-check text-gold-400 text-xs"></i> British & American English</li>
+                            <li class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/5"><i class="fa-solid fa-circle-check text-gold-400 text-xs"></i> British & American Accent</li>
+                            <li class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/5"><i class="fa-solid fa-circle-check text-gold-400 text-xs"></i> Stage Performance</li>
+                            <li class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/5"><i class="fa-solid fa-circle-check text-gold-400 text-xs"></i> Group Discussion & Debate</li>
+                            <li class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/5"><i class="fa-solid fa-circle-check text-gold-400 text-xs"></i> Newspaper Vocab</li>
+                            <li class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/5"><i class="fa-solid fa-circle-check text-gold-400 text-xs"></i> Daily Vocab Building</li>
+                            <li class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/5"><i class="fa-solid fa-circle-check text-gold-400 text-xs"></i> Spoken Phrasal Verbs & Idioms</li>
+                            <li class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/5"><i class="fa-solid fa-circle-check text-gold-400 text-xs"></i> Idiomatic Sentences</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-3xl border border-gold-400/20 relative space-y-6">
+                        <div class="flex items-center gap-3 pb-4 border-b border-white/10">
+                            <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center text-2xl border border-emerald-500/30">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-black text-white">Special Features</h3>
+                                <p class="text-xs text-emerald-400 font-semibold">Grooming & Career Development</p>
+                            </div>
+                        </div>
+
+                        <ul class="grid sm:grid-cols-2 gap-3 text-sm text-slate-300">
+                            <li class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/5"><i class="fa-solid fa-star text-emerald-400 text-xs"></i> Etiquette & Manners</li>
+                            <li class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/5"><i class="fa-solid fa-star text-emerald-400 text-xs"></i> Personality Development</li>
+                            <li class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/5"><i class="fa-solid fa-star text-emerald-400 text-xs"></i> Role Play & Mock Classes</li>
+                            <li class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/5"><i class="fa-solid fa-star text-emerald-400 text-xs"></i> Motivational Classes</li>
+                            <li class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/5"><i class="fa-solid fa-star text-emerald-400 text-xs"></i> Dining Etiquette</li>
+                            <li class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/5"><i class="fa-solid fa-star text-emerald-400 text-xs"></i> Interview Skills</li>
+                            <li class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/5"><i class="fa-solid fa-star text-emerald-400 text-xs"></i> Music Classes</li>
+                            <li class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/5"><i class="fa-solid fa-star text-emerald-400 text-xs"></i> Mini Seminar</li>
+                            <li class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/5"><i class="fa-solid fa-star text-emerald-400 text-xs"></i> Mega Seminar</li>
+                            <li class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/5"><i class="fa-solid fa-star text-emerald-400 text-xs"></i> Stories to Practice</li>
+                            <li class="flex items-center gap-2 bg-white/5 p-3 rounded-xl border border-white/5 sm:col-span-2"><i class="fa-solid fa-star text-emerald-400 text-xs"></i> Ideas to Speak Fluently</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SATURDAY PODIUM CLASS FEATURE -->
+        <section id="podium" class="py-20 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="glass-card rounded-3xl p-8 sm:p-12 border-l-4 border-gold-400">
+                    <div class="grid lg:grid-cols-12 gap-8 items-center">
+                        
+                        <div class="lg:col-span-4 text-center lg:text-left space-y-3">
+                            <div class="w-16 h-16 bg-gold-400/10 text-gold-400 border border-gold-400/30 rounded-2xl flex items-center justify-center text-3xl mx-auto lg:mx-0">
+                                <i class="fa-solid fa-microphone-lines"></i>
+                            </div>
+                            <span class="text-xs font-black text-gold-400 uppercase tracking-widest">Weekly Feature</span>
+                            <h3 class="text-3xl font-black text-white">Saturday Stage Podium Class</h3>
+                            <p class="text-xs text-slate-400">No Regular Syllabus Teaching On Saturdays</p>
+                        </div>
+
+                        <div class="lg:col-span-8 space-y-4">
+                            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                                At AIEL Balaganj, grammar knowledge alone is incomplete without practical speaking courage. Every Saturday is strictly reserved for Stage Podium Practice and extempore drills!
+                            </p>
+                            
+                            <div class="grid sm:grid-cols-3 gap-4 pt-2">
+                                <div class="bg-white/5 border border-white/10 p-4 rounded-xl">
+                                    <div class="text-gold-400 font-bold text-sm mb-1"><i class="fa-solid fa-bolt"></i> Extempore Speech</div>
+                                    <p class="text-xs text-slate-400">Instant topic speech delivery without preparation.</p>
+                                </div>
+                                <div class="bg-white/5 border border-white/10 p-4 rounded-xl">
+                                    <div class="text-gold-400 font-bold text-sm mb-1"><i class="fa-solid fa-eye"></i> Eye Contact</div>
+                                    <p class="text-xs text-slate-400">Conquer stage fear & audience hesitation.</p>
+                                </div>
+                                <div class="bg-white/5 border border-white/10 p-4 rounded-xl">
+                                    <div class="text-gold-400 font-bold text-sm mb-1"><i class="fa-solid fa-user-check"></i> Posture Drills</div>
+                                    <p class="text-xs text-slate-400">Hand gestures and professional modulation.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BATCH SCHEDULES SECTION -->
+        <section id="batches" class="py-20 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-black text-gold-400 uppercase tracking-widest bg-gold-400/10 border border-gold-400/30 px-3.5 py-1.5 rounded-full">Flexible Daily Timings</span>
+                    <h2 class="text-3xl sm:text-5xl font-black text-white mt-4">Batch Schedules</h2>
+                    <p class="text-slate-400 text-sm mt-2">Mon-Fri: Regular Course | <strong>Saturday: Stage Podium Class Only</strong></p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <div class="glass-card p-6 rounded-2xl space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="bg-gold-400/10 text-gold-400 border border-gold-400/30 text-xs font-bold px-3 py-1 rounded-lg">Morning 1</span>
+                            <span class="text-xs text-slate-400">Daily Mon - Sat</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-white">08:00 AM - 09:30 AM</h3>
+                        <p class="text-xs text-slate-400">Basic Spoken English & Grammar Foundation</p>
+                        <button onclick="openModal('enquiryModal')" class="w-full whatsapp-glow-btn text-white py-3 rounded-xl font-bold text-xs flex justify-center items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-base"></i> Book This Batch
+                        </button>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="bg-gold-400/10 text-gold-400 border border-gold-400/30 text-xs font-bold px-3 py-1 rounded-lg">Morning 2</span>
+                            <span class="text-xs text-slate-400">Daily Mon - Sat</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-white">09:30 AM - 11:00 AM</h3>
+                        <p class="text-xs text-slate-400">Advance Fluency & Stage Fear Removal</p>
+                        <button onclick="openModal('enquiryModal')" class="w-full whatsapp-glow-btn text-white py-3 rounded-xl font-bold text-xs flex justify-center items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-base"></i> Book This Batch
+                        </button>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="bg-gold-400/10 text-gold-400 border border-gold-400/30 text-xs font-bold px-3 py-1 rounded-lg">Afternoon</span>
+                            <span class="text-xs text-slate-400">Daily Mon - Sat</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-white">03:00 PM - 04:30 PM</h3>
+                        <p class="text-xs text-slate-400">Vocabulary & Spoken Fluency Drills</p>
+                        <button onclick="openModal('enquiryModal')" class="w-full whatsapp-glow-btn text-white py-3 rounded-xl font-bold text-xs flex justify-center items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-base"></i> Book This Batch
+                        </button>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="bg-gold-400/10 text-gold-400 border border-gold-400/30 text-xs font-bold px-3 py-1 rounded-lg">Evening 1</span>
+                            <span class="text-xs text-slate-400">Daily Mon - Sat</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-white">05:30 PM - 07:00 PM</h3>
+                        <p class="text-xs text-slate-400">Group Discussion (GD) & P.D. Sessions</p>
+                        <button onclick="openModal('enquiryModal')" class="w-full whatsapp-glow-btn text-white py-3 rounded-xl font-bold text-xs flex justify-center items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-base"></i> Book This Batch
+                        </button>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl space-y-4 lg:col-span-2">
+                        <div class="flex justify-between items-center">
+                            <span class="bg-gold-400/10 text-gold-400 border border-gold-400/30 text-xs font-bold px-3 py-1 rounded-lg">Late Evening</span>
+                            <span class="text-xs text-slate-400">Daily Mon - Sat</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-white">07:00 PM - 08:30 PM</h3>
+                        <p class="text-xs text-slate-400">Special Late Evening Batch for Job Seekers & Working Professionals</p>
+                        <button onclick="openModal('enquiryModal')" class="w-full whatsapp-glow-btn text-white py-3 rounded-xl font-bold text-xs flex justify-center items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-base"></i> Book Last Batch
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- GOOGLE REVIEWS / STUDENT TESTIMONIALS SECTION -->
+        <section id="reviews" class="py-20 relative border-t border-white/10 bg-cyber-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <span class="text-xs font-black text-gold-400 uppercase tracking-widest bg-gold-400/10 border border-gold-400/30 px-3.5 py-1.5 rounded-full inline-flex items-center gap-1.5">
+                        <i class="fa-brands fa-google text-gold-400"></i> Google Reviews & Feedback
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-black text-white mt-2">What Our Students Say</h2>
+                    <p class="text-slate-400 text-sm">Real stories and feedback from our students learning at AIEL Balaganj Lucknow.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    
+                    <!-- REVIEW 1: ABDUL SAMAD (RAHILA PARVEEN) -->
+                    <div class="glass-card p-8 rounded-3xl border border-gold-400/30 flex flex-col justify-between relative space-y-6">
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 bg-gold-400/20 rounded-full flex items-center justify-center text-gold-400 font-black text-xl border border-gold-400/40">
+                                        AS
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-black text-white">Abdul Samad</h3>
+                                        <p class="text-xs text-slate-400">Morning Batch (8:00 AM - 9:30 AM) &bull; via Rahila Parveen</p>
+                                    </div>
+                                </div>
+                                <i class="fa-brands fa-google text-2xl text-slate-500"></i>
+                            </div>
+
+                            <div class="flex items-center gap-1 text-gold-400 text-sm">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+
+                            <p class="text-slate-300 text-sm leading-relaxed italic font-light">
+                            "I am Abdul Samad, student of American institute of English language PVT LTD[cite: 2]. Morning batch 8 to 9:30[cite: 2]. I am here to share my feedback , my english journey is awesome here I have developed confidence and fluency in english it's all because of my mentors Moin sir and Samreen Ma'am[cite: 2]. I recommend everyone whoever wants to develop fluency in english and strong confident personality then you should join only American institute of English language PVT LTD[cite: 2]. because here I have met Certified and experienced trainer[cite: 2]. I'm fully satisfied 😛😛😛😛😛[cite: 2] Thank you ma'am and sir and American institute of English language PVT LTD."[cite: 2]
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- REVIEW 2: GAURAV GUPTA -->
+                    <div class="glass-card p-8 rounded-3xl border border-gold-400/30 flex flex-col justify-between relative space-y-6">
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 bg-emerald-500/20 rounded-full flex items-center justify-center text-emerald-400 font-black text-xl border border-emerald-500/40">
+                                        GG
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-black text-white">Gaurav Gupta</h3>
+                                        <p class="text-xs text-slate-400">Verified Student Review</p>
+                                    </div>
+                                </div>
+                                <i class="fa-brands fa-google text-2xl text-slate-500"></i>
+                            </div>
+
+                            <div class="flex items-center gap-1 text-gold-400 text-sm">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+
+                            <p class="text-slate-300 text-sm leading-relaxed italic font-light">
+                            "This is a great place with a perfect environment to learn English speaking fluently because here the teachers are so knowledgeable and co-operative[cite: 3]. They are always dedicating in their teaching and willing to help the students[cite: 3]. I learned english speaking from here and my experience was just good as I had expected[cite: 3]. And there is also an LMC( Life Time Membership ) card facility that allow you to attend the classes for a lifetime without paying a single penny[cite: 3]. Bcaz learning never ends, it's a journey that lasts a lifetime[cite: 3]. 🫡 Thank you! 🙏"[cite: 3]
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- AIEL GALLERY SECTION - 15 PHOTOS (1 TO 15) WITH EXPAND VIEW & EDITABLE DESCRIPTIONS -->
+        <section id="gallery" class="py-20 relative border-t border-white/10 bg-cyber-900/40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                    <span class="text-xs font-black text-gold-400 uppercase tracking-widest bg-gold-400/10 border border-gold-400/30 px-3.5 py-1.5 rounded-full">
+                        <i class="fa-solid fa-camera-retro mr-1"></i> Campus & Activities Gallery (15 Photos)
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-black text-white mt-2">AIEL Gallery</h2>
+                    <p class="text-slate-400 text-sm">Click on any photo from <strong class="text-gold-400">Photo 1 to 15</strong> to <strong class="text-gold-400">Expand / View Fullscreen</strong>. Type your custom descriptions below each photo.</p>
+                </div>
+
+                <!-- 15 PHOTO GRID WITH LIGHTBOX ZOOM & EDITABLE SPACES -->
+                <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+                    
+                    <!-- PHOTO 1 -->
+                    <div class="glass-card rounded-2xl overflow-hidden group border border-white/10 flex flex-col justify-between">
+                        <div class="h-56 bg-cyber-900 relative overflow-hidden flex items-center justify-center cursor-pointer" onclick="openImageViewer('AIEL.jpg', 'Photo 1 - Distributing the certificates and trophies to the winners of Seminar')">
+                            <img src="AIEL.jpg" alt="AIEL Photo 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80" onerror="this.src='https://via.placeholder.com/600x400?text=AIEL+Photo+1'">
+                            <div class="absolute inset-0 bg-cyber-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="bg-gold-400 text-cyber-950 font-bold px-3 py-1.5 rounded-xl text-xs shadow-lg"><i class="fa-solid fa-expand mr-1"></i> Click to Expand</span>
+                            </div>
+                            <span class="absolute top-3 left-3 bg-gold-400 text-cyber-950 text-xs font-black px-2.5 py-1 rounded-md shadow-md">#1</span>
+                            <span class="absolute bottom-3 left-3 bg-cyber-950/90 text-gold-400 text-xs font-bold px-3 py-1 rounded-lg border border-gold-400/30">Photo 1</span>
+                        </div>
+                        <div class="p-4 bg-cyber-950/80 border-t border-white/5">
+                            <p class="text-xs text-slate-400 italic font-light">
+                                A memorable institute celebration featuring award presentations, certificate distribution, bouquet ceremonies, and live performances at the American Institute of English Language.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- PHOTO 2 -->
+                    <div class="glass-card rounded-2xl overflow-hidden group border border-white/10 flex flex-col justify-between">
+                        <div class="h-56 bg-cyber-900 relative overflow-hidden flex items-center justify-center cursor-pointer" onclick="openImageViewer('AIEL 1.jpeg', 'Photo 2 - Celebrating the winners of Seminar')">
+                            <img src="AIEL 1.jpeg" alt="AIEL Photo 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80" onerror="this.src='https://via.placeholder.com/600x400?text=AIEL+Photo+2'">
+                            <div class="absolute inset-0 bg-cyber-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="bg-gold-400 text-cyber-950 font-bold px-3 py-1.5 rounded-xl text-xs shadow-lg"><i class="fa-solid fa-expand mr-1"></i> Click to Expand</span>
+                            </div>
+                            <span class="absolute top-3 left-3 bg-gold-400 text-cyber-950 text-xs font-black px-2.5 py-1 rounded-md shadow-md">#2</span>
+                            <span class="absolute bottom-3 left-3 bg-cyber-950/90 text-gold-400 text-xs font-bold px-3 py-1 rounded-lg border border-gold-400/30">Photo 2</span>
+                        </div>
+                        <div class="p-4 bg-cyber-950/80 border-t border-white/5">
+                            <p class="text-xs text-slate-400 italic font-light">
+                                A memorable celebration at the American Institute of English Language featuring award ceremonies, student achievements, group photographs, and proud moments of recognition and success.                           </p>
+                        </div>
+                    </div>
+
+                    <!-- PHOTO 3 -->
+                    <div class="glass-card rounded-2xl overflow-hidden group border border-white/10 flex flex-col justify-between">
+                        <div class="h-56 bg-cyber-900 relative overflow-hidden flex items-center justify-center cursor-pointer" onclick="openImageViewer('AIEL 2.jpeg', 'Photo 3 - SEMINAR ORGANISED BY AMERICAN INSTITUTE OF ENGLISH LANGUAGE PVT. LTD.')">
+                            <img src="AIEL 2.jpeg" alt="AIEL Photo 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80" onerror="this.src='https://via.placeholder.com/600x400?text=AIEL+Photo+3'">
+                            <div class="absolute inset-0 bg-cyber-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="bg-gold-400 text-cyber-950 font-bold px-3 py-1.5 rounded-xl text-xs shadow-lg"><i class="fa-solid fa-expand mr-1"></i> Click to Expand</span>
+                            </div>
+                            <span class="absolute top-3 left-3 bg-gold-400 text-cyber-950 text-xs font-black px-2.5 py-1 rounded-md shadow-md">#3</span>
+                            <span class="absolute bottom-3 left-3 bg-cyber-950/90 text-gold-400 text-xs font-bold px-3 py-1 rounded-lg border border-gold-400/30">Photo 3</span>
+                        </div>
+                        <div class="p-4 bg-cyber-950/80 border-t border-white/5">
+                            <p class="text-xs text-slate-400 italic font-light">
+                                A collage of students confidently speaking on stage at an English seminar and talent competition, showcasing their communication and public speaking skills.
+The event features vibrant stage lighting, a colorful backdrop, and enthusiastic participants presenting their talents at the American Institute of English Language.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- PHOTO 4 -->
+                    <div class="glass-card rounded-2xl overflow-hidden group border border-white/10 flex flex-col justify-between">
+                        <div class="h-56 bg-cyber-900 relative overflow-hidden flex items-center justify-center cursor-pointer" onclick="openImageViewer('AIEL 3.jpeg', 'Photo 4 - AIEL Gallery')">
+                            <img src="AIEL 3.jpeg" alt="AIEL Photo 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80" onerror="this.src='https://via.placeholder.com/600x400?text=AIEL+Photo+4'">
+                            <div class="absolute inset-0 bg-cyber-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="bg-gold-400 text-cyber-950 font-bold px-3 py-1.5 rounded-xl text-xs shadow-lg"><i class="fa-solid fa-expand mr-1"></i> Click to Expand</span>
+                            </div>
+                            <span class="absolute top-3 left-3 bg-gold-400 text-cyber-950 text-xs font-black px-2.5 py-1 rounded-md shadow-md">#4</span>
+                            <span class="absolute bottom-3 left-3 bg-cyber-950/90 text-gold-400 text-xs font-bold px-3 py-1 rounded-lg border border-gold-400/30">Photo 4</span>
+                        </div>
+                        <div class="p-4 bg-cyber-950/80 border-t border-white/5">
+                            <p class="text-xs text-slate-400 italic font-light">
+                                A collage showcasing students’ achievements, seminars, cultural activities, certificate ceremonies, and classroom sessions at the American Institute of English Language.
+The institute’s building features prominent signage, highlighting its commitment to English language learning, personality development, and communication skills.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- PHOTO 5 -->
+                    <div class="glass-card rounded-2xl overflow-hidden group border border-white/10 flex flex-col justify-between">
+                        <div class="h-56 bg-cyber-900 relative overflow-hidden flex items-center justify-center cursor-pointer" onclick="openImageViewer('AIEL 4.jpeg', 'Photo 5 - AIEL Gallery')">
+                            <img src="AIEL 4.jpeg" alt="AIEL Photo 5" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80" onerror="this.src='https://via.placeholder.com/600x400?text=AIEL+Photo+5'">
+                            <div class="absolute inset-0 bg-cyber-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="bg-gold-400 text-cyber-950 font-bold px-3 py-1.5 rounded-xl text-xs shadow-lg"><i class="fa-solid fa-expand mr-1"></i> Click to Expand</span>
+                            </div>
+                            <span class="absolute top-3 left-3 bg-gold-400 text-cyber-950 text-xs font-black px-2.5 py-1 rounded-md shadow-md">#5</span>
+                            <span class="absolute bottom-3 left-3 bg-cyber-950/90 text-gold-400 text-xs font-bold px-3 py-1 rounded-lg border border-gold-400/30">Photo 5</span>
+                        </div>
+                        <div class="p-4 bg-cyber-950/80 border-t border-white/5">
+                            <p class="text-xs text-slate-400 italic font-light">
+                                A collage of students receiving certificates of achievement from the American Institute of English Language, celebrating their learning progress and accomplishments.
+The photos highlight student success, recognition, and the institute’s dedication to improving English communication skills and building confidence.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- PHOTO 6 -->
+                    <div class="glass-card rounded-2xl overflow-hidden group border border-white/10 flex flex-col justify-between">
+                        <div class="h-56 bg-cyber-900 relative overflow-hidden flex items-center justify-center cursor-pointer" onclick="openImageViewer('AIEL 5.jpeg', 'Photo 6 - AIEL Gallery')">
+                            <img src="AIEL 5.jpeg" alt="AIEL Photo 6" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80" onerror="this.src='https://via.placeholder.com/600x400?text=AIEL+Photo+6'">
+                            <div class="absolute inset-0 bg-cyber-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="bg-gold-400 text-cyber-950 font-bold px-3 py-1.5 rounded-xl text-xs shadow-lg"><i class="fa-solid fa-expand mr-1"></i> Click to Expand</span>
+                            </div>
+                            <span class="absolute top-3 left-3 bg-gold-400 text-cyber-950 text-xs font-black px-2.5 py-1 rounded-md shadow-md">#6</span>
+                            <span class="absolute bottom-3 left-3 bg-cyber-950/90 text-gold-400 text-xs font-bold px-3 py-1 rounded-lg border border-gold-400/30">Photo 6</span>
+                        </div>
+                        <div class="p-4 bg-cyber-950/80 border-t border-white/5">
+                            <p class="text-xs text-slate-400 italic font-light">
+                                A collage capturing memorable moments from seminars, talent expos, award ceremonies, and student gatherings, celebrating achievements and personal growth.
+The images showcase enthusiastic participants, distinguished guests, trophy presentations, and large audiences at educational events and professional development programs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- PHOTO 7 -->
+                    <div class="glass-card rounded-2xl overflow-hidden group border border-white/10 flex flex-col justify-between">
+                        <div class="h-56 bg-cyber-900 relative overflow-hidden flex items-center justify-center cursor-pointer" onclick="openImageViewer('AIEL 6.jpEg', 'Photo 7 - AIEL Gallery')">
+                            <img src="AIEL 6.jpeg" alt="AIEL Photo 7" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80" onerror="this.src='https://via.placeholder.com/600x400?text=AIEL+Photo+7'">
+                            <div class="absolute inset-0 bg-cyber-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="bg-gold-400 text-cyber-950 font-bold px-3 py-1.5 rounded-xl text-xs shadow-lg"><i class="fa-solid fa-expand mr-1"></i> Click to Expand</span>
+                            </div>
+                            <span class="absolute top-3 left-3 bg-gold-400 text-cyber-950 text-xs font-black px-2.5 py-1 rounded-md shadow-md">#7</span>
+                            <span class="absolute bottom-3 left-3 bg-cyber-950/90 text-gold-400 text-xs font-bold px-3 py-1 rounded-lg border border-gold-400/30">Photo 7</span>
+                        </div>
+                        <div class="p-4 bg-cyber-950/80 border-t border-white/5">
+                            <p class="text-xs text-slate-400 italic font-light">
+                                A collage showcasing students attending educational seminars, interactive classroom sessions, and professional development events, alongside a special award presentation.
+The images highlight student engagement, knowledge sharing, confidence building, and the celebration of excellence through the American Institute of English Language.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- PHOTO 8 -->
+                    <div class="glass-card rounded-2xl overflow-hidden group border border-white/10 flex flex-col justify-between">
+                        <div class="h-56 bg-cyber-900 relative overflow-hidden flex items-center justify-center cursor-pointer" onclick="openImageViewer('AIEL 7.jpeg', 'Photo 8 - AIEL Gallery')">
+                            <img src="AIEL 7.jpeg" alt="AIEL Photo 8" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80" onerror="this.src='https://via.placeholder.com/600x400?text=AIEL+Photo+8'">
+                            <div class="absolute inset-0 bg-cyber-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="bg-gold-400 text-cyber-950 font-bold px-3 py-1.5 rounded-xl text-xs shadow-lg"><i class="fa-solid fa-expand mr-1"></i> Click to Expand</span>
+                            </div>
+                            <span class="absolute top-3 left-3 bg-gold-400 text-cyber-950 text-xs font-black px-2.5 py-1 rounded-md shadow-md">#8</span>
+                            <span class="absolute bottom-3 left-3 bg-cyber-950/90 text-gold-400 text-xs font-bold px-3 py-1 rounded-lg border border-gold-400/30">Photo 8</span>
+                        </div>
+                        <div class="p-4 bg-cyber-950/80 border-t border-white/5">
+                            <p class="text-xs text-slate-400 italic font-light">
+                               A collage of students enjoying an educational trip to Agra, featuring group photos at the historic Agra Fort and the iconic Taj Mahal.
+The memories capture sightseeing, friendship, teamwork, and fun-filled moments shared by students during an unforgettable institute tour.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- PHOTO 9 -->
+                    <div class="glass-card rounded-2xl overflow-hidden group border border-white/10 flex flex-col justify-between">
+                        <div class="h-56 bg-cyber-900 relative overflow-hidden flex items-center justify-center cursor-pointer" onclick="openImageViewer('AIEL 8.jpeg', 'Photo 9 - AIEL Gallery')">
+                            <img src="AIEL 8.jpeg" alt="AIEL Photo 9" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80" onerror="this.src='https://via.placeholder.com/600x400?text=AIEL+Photo+9'">
+                            <div class="absolute inset-0 bg-cyber-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="bg-gold-400 text-cyber-950 font-bold px-3 py-1.5 rounded-xl text-xs shadow-lg"><i class="fa-solid fa-expand mr-1"></i> Click to Expand</span>
+                            </div>
+                            <span class="absolute top-3 left-3 bg-gold-400 text-cyber-950 text-xs font-black px-2.5 py-1 rounded-md shadow-md">#9</span>
+                            <span class="absolute bottom-3 left-3 bg-cyber-950/90 text-gold-400 text-xs font-bold px-3 py-1 rounded-lg border border-gold-400/30">Photo 9</span>
+                        </div>
+                        <div class="p-4 bg-cyber-950/80 border-t border-white/5">
+                            <p class="text-xs text-slate-400 italic font-light">
+                               A mock class session at the American Institute of English Language, where students practice public speaking, build confidence, and improve their communication skills.
+The interactive classroom encourages students to overcome stage fear, express themselves confidently, and prepare for real-world conversations. 
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- PHOTO 10 -->
+                    <div class="glass-card rounded-2xl overflow-hidden group border border-white/10 flex flex-col justify-between">
+                        <div class="h-56 bg-cyber-900 relative overflow-hidden flex items-center justify-center cursor-pointer" onclick="openImageViewer('gallery10.jpg', 'Photo 10 - AIEL Gallery')">
+                            <img src="gallery10.jpg" alt="AIEL Photo 10" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80" onerror="this.src='https://via.placeholder.com/600x400?text=AIEL+Photo+10'">
+                            <div class="absolute inset-0 bg-cyber-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="bg-gold-400 text-cyber-950 font-bold px-3 py-1.5 rounded-xl text-xs shadow-lg"><i class="fa-solid fa-expand mr-1"></i> Click to Expand</span>
+                            </div>
+                            <span class="absolute top-3 left-3 bg-gold-400 text-cyber-950 text-xs font-black px-2.5 py-1 rounded-md shadow-md">#10</span>
+                            <span class="absolute bottom-3 left-3 bg-cyber-950/90 text-gold-400 text-xs font-bold px-3 py-1 rounded-lg border border-gold-400/30">Photo 10</span>
+                        </div>
+                        <div class="p-4 bg-cyber-950/80 border-t border-white/5">
+                            <p class="text-xs text-slate-400 italic font-light">
+                                Write your custom photo description here...
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- PHOTO 11 -->
+                    <div class="glass-card rounded-2xl overflow-hidden group border border-white/10 flex flex-col justify-between">
+                        <div class="h-56 bg-cyber-900 relative overflow-hidden flex items-center justify-center cursor-pointer" onclick="openImageViewer('gallery11.jpg', 'Photo 11 - AIEL Gallery')">
+                            <img src="gallery11.jpg" alt="AIEL Photo 11" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80" onerror="this.src='https://via.placeholder.com/600x400?text=AIEL+Photo+11'">
+                            <div class="absolute inset-0 bg-cyber-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="bg-gold-400 text-cyber-950 font-bold px-3 py-1.5 rounded-xl text-xs shadow-lg"><i class="fa-solid fa-expand mr-1"></i> Click to Expand</span>
+                            </div>
+                            <span class="absolute top-3 left-3 bg-gold-400 text-cyber-950 text-xs font-black px-2.5 py-1 rounded-md shadow-md">#11</span>
+                            <span class="absolute bottom-3 left-3 bg-cyber-950/90 text-gold-400 text-xs font-bold px-3 py-1 rounded-lg border border-gold-400/30">Photo 11</span>
+                        </div>
+                        <div class="p-4 bg-cyber-950/80 border-t border-white/5">
+                            <p class="text-xs text-slate-400 italic font-light">
+                                Write your custom photo description here...
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- PHOTO 12 -->
+                    <div class="glass-card rounded-2xl overflow-hidden group border border-white/10 flex flex-col justify-between">
+                        <div class="h-56 bg-cyber-900 relative overflow-hidden flex items-center justify-center cursor-pointer" onclick="openImageViewer('gallery12.jpg', 'Photo 12 - AIEL Gallery')">
+                            <img src="gallery12.jpg" alt="AIEL Photo 12" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80" onerror="this.src='https://via.placeholder.com/600x400?text=AIEL+Photo+12'">
+                            <div class="absolute inset-0 bg-cyber-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="bg-gold-400 text-cyber-950 font-bold px-3 py-1.5 rounded-xl text-xs shadow-lg"><i class="fa-solid fa-expand mr-1"></i> Click to Expand</span>
+                            </div>
+                            <span class="absolute top-3 left-3 bg-gold-400 text-cyber-950 text-xs font-black px-2.5 py-1 rounded-md shadow-md">#12</span>
+                            <span class="absolute bottom-3 left-3 bg-cyber-950/90 text-gold-400 text-xs font-bold px-3 py-1 rounded-lg border border-gold-400/30">Photo 12</span>
+                        </div>
+                        <div class="p-4 bg-cyber-950/80 border-t border-white/5">
+                            <p class="text-xs text-slate-400 italic font-light">
+                                Write your custom photo description here...
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- PHOTO 13 -->
+                    <div class="glass-card rounded-2xl overflow-hidden group border border-white/10 flex flex-col justify-between">
+                        <div class="h-56 bg-cyber-900 relative overflow-hidden flex items-center justify-center cursor-pointer" onclick="openImageViewer('gallery13.jpg', 'Photo 13 - AIEL Gallery')">
+                            <img src="gallery13.jpg" alt="AIEL Photo 13" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80" onerror="this.src='https://via.placeholder.com/600x400?text=AIEL+Photo+13'">
+                            <div class="absolute inset-0 bg-cyber-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="bg-gold-400 text-cyber-950 font-bold px-3 py-1.5 rounded-xl text-xs shadow-lg"><i class="fa-solid fa-expand mr-1"></i> Click to Expand</span>
+                            </div>
+                            <span class="absolute top-3 left-3 bg-gold-400 text-cyber-950 text-xs font-black px-2.5 py-1 rounded-md shadow-md">#13</span>
+                            <span class="absolute bottom-3 left-3 bg-cyber-950/90 text-gold-400 text-xs font-bold px-3 py-1 rounded-lg border border-gold-400/30">Photo 13</span>
+                        </div>
+                        <div class="p-4 bg-cyber-950/80 border-t border-white/5">
+                            <p class="text-xs text-slate-400 italic font-light">
+                                Write your custom photo description here...
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- PHOTO 14 -->
+                    <div class="glass-card rounded-2xl overflow-hidden group border border-white/10 flex flex-col justify-between">
+                        <div class="h-56 bg-cyber-900 relative overflow-hidden flex items-center justify-center cursor-pointer" onclick="openImageViewer('gallery14.jpg', 'Photo 14 - AIEL Gallery')">
+                            <img src="gallery14.jpg" alt="AIEL Photo 14" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80" onerror="this.src='https://via.placeholder.com/600x400?text=AIEL+Photo+14'">
+                            <div class="absolute inset-0 bg-cyber-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="bg-gold-400 text-cyber-950 font-bold px-3 py-1.5 rounded-xl text-xs shadow-lg"><i class="fa-solid fa-expand mr-1"></i> Click to Expand</span>
+                            </div>
+                            <span class="absolute top-3 left-3 bg-gold-400 text-cyber-950 text-xs font-black px-2.5 py-1 rounded-md shadow-md">#14</span>
+                            <span class="absolute bottom-3 left-3 bg-cyber-950/90 text-gold-400 text-xs font-bold px-3 py-1 rounded-lg border border-gold-400/30">Photo 14</span>
+                        </div>
+                        <div class="p-4 bg-cyber-950/80 border-t border-white/5">
+                            <p class="text-xs text-slate-400 italic font-light">
+                                Write your custom photo description here...
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- PHOTO 15 -->
+                    <div class="glass-card rounded-2xl overflow-hidden group border border-white/10 flex flex-col justify-between">
+                        <div class="h-56 bg-cyber-900 relative overflow-hidden flex items-center justify-center cursor-pointer" onclick="openImageViewer('gallery15.jpg', 'Photo 15 - AIEL Gallery')">
+                            <img src="gallery15.jpg" alt="AIEL Photo 15" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80" onerror="this.src='https://via.placeholder.com/600x400?text=AIEL+Photo+15'">
+                            <div class="absolute inset-0 bg-cyber-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="bg-gold-400 text-cyber-950 font-bold px-3 py-1.5 rounded-xl text-xs shadow-lg"><i class="fa-solid fa-expand mr-1"></i> Click to Expand</span>
+                            </div>
+                            <span class="absolute top-3 left-3 bg-gold-400 text-cyber-950 text-xs font-black px-2.5 py-1 rounded-md shadow-md">#15</span>
+                            <span class="absolute bottom-3 left-3 bg-cyber-950/90 text-gold-400 text-xs font-bold px-3 py-1 rounded-lg border border-gold-400/30">Photo 15</span>
+                        </div>
+                        <div class="p-4 bg-cyber-950/80 border-t border-white/5">
+                            <p class="text-xs text-slate-400 italic font-light">
+                                Write your custom photo description here...
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-cyber-950 border-t border-white/10 py-12 text-center text-xs text-slate-400">
+            <div class="max-w-7xl mx-auto px-4 space-y-4">
+                <p>© 1991-2026 American Institute of English Language Pvt. Ltd. (AIEL Balaganj). All Rights Reserved.</p>
+                <p class="text-gold-400 font-bold">Founder: Dr. Vikram P. Lamba | Managing Director (Balaganj): Moin Khan</p>
+                <p>Hardoi Road, Balaganj, Lucknow | Helpline: 7800840900</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- FULLSCREEN IMAGE EXPAND LIGHTBOX MODAL -->
+    <div id="imageViewerModal" onclick="closeImageViewer(event)" class="fixed inset-0 z-50 hidden bg-cyber-950/90 backdrop-blur-lg flex items-center justify-center p-4 sm:p-8">
+        <div class="relative max-w-5xl w-full max-h-[90vh] flex flex-col items-center justify-center">
+            
+            <!-- CLOSE BUTTON -->
+            <button onclick="closeImageViewerBtn()" class="absolute -top-12 right-0 sm:-right-4 w-11 h-11 bg-white/10 hover:bg-gold-400 hover:text-cyber-950 text-white rounded-full flex items-center justify-center transition-all text-xl shadow-2xl z-50">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- EXPANDED IMAGE CONTAINER -->
+            <div class="bg-cyber-900 border border-gold-400/50 rounded-3xl p-3 shadow-2xl max-w-full overflow-hidden flex flex-col items-center">
+                <img id="expandedImg" src="" alt="Expanded AIEL Gallery Image" class="max-h-[70vh] max-w-full object-contain rounded-2xl shadow-xl" />
+                <div id="expandedImgCaption" class="text-gold-400 font-bold text-sm sm:text-base mt-4 text-center tracking-wide"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ENQUIRY POPUP MODAL -->
+    <div id="enquiryModal" onclick="handleOutsideClick(event)" class="fixed inset-0 z-50 hidden bg-cyber-950/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="glass-card max-w-lg w-full rounded-3xl p-8 relative border-t-4 border-gold-400 animate-in fade-in zoom-in duration-300">
+            
+            <button onclick="closeModal('enquiryModal')" class="absolute top-5 right-5 w-10 h-10 bg-white/10 hover:bg-gold-400 hover:text-cyber-950 text-slate-300 rounded-full flex items-center justify-center transition-all">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 bg-gold-400/10 text-gold-400 rounded-xl flex items-center justify-center text-xl border border-gold-400/30">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-black text-white">Book Classes Directly</h3>
+                    <p class="text-xs text-gold-400 font-semibold">AIEL Balaganj Lucknow</p>
+                </div>
+            </div>
+
+            <p class="text-xs text-slate-300 mb-6 leading-relaxed">
+                Fill this quick form to get instant course details on Email & WhatsApp!
+            </p>
+
+            <form onsubmit="handleDualSubmission(event, 'modalName', 'modalPhone', 'modalQuery', 'Popup Direct Class Admission')" class="space-y-4">
+                <input type="hidden" id="modal_access_key" value="d74b7243-31d5-484e-8d06-4fa53de54893">
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5">Full Name</label>
+                    <input type="text" id="modalName" required placeholder="Enter your full name" class="w-full bg-cyber-950/90 border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-400 transition-colors">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5">Phone / WhatsApp Number</label>
+                    <input type="tel" id="modalPhone" pattern="[0-9]{10}" required placeholder="10-digit mobile number" class="w-full bg-cyber-950/90 border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-400 transition-colors">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5">Your Query / Preferred Batch</label>
+                    <select id="modalQuery" class="w-full bg-cyber-950/90 border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-400 transition-colors">
+                        <option value="Morning Batch Admission">Morning Batch Admission</option>
+                        <option value="Evening Batch Admission">Evening Batch Admission</option>
+                        <option value="Saturday Stage Podium Class Enquiry">Saturday Stage Podium Class Enquiry</option>
+                        <option value="Seminar & Trophies Registration">Seminar & Trophies Registration</option>
+                        <option value="Group Trip Booking Enquiry">Group Trip Booking Enquiry</option>
+                        <option value="General Fee & Course Enquiry">General Fee & Course Enquiry</option>
+                    </select>
+                </div>
+
+                <div class="pt-2 flex items-center gap-3">
+                    <button type="submit" id="modalBtn" class="flex-1 gold-btn text-cyber-950 py-3.5 rounded-xl font-extrabold text-sm flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-paper-plane text-base"></i> Submit To Email & WhatsApp
+                    </button>
+                    <button type="button" onclick="closeModal('enquiryModal')" class="px-5 py-3.5 bg-white/5 hover:bg-white/10 text-slate-300 rounded-xl font-bold text-xs border border-white/10 transition-colors">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        const WHATSAPP_NUMBER = "917800840900";
+
+        // IMAGE LIGHTBOX ZOOM FUNCTIONS
+        function openImageViewer(imageSrc, captionText) {
+            const modal = document.getElementById('imageViewerModal');
+            const img = document.getElementById('expandedImg');
+            const caption = document.getElementById('expandedImgCaption');
+
+            img.src = imageSrc;
+            caption.innerText = captionText;
+            modal.classList.add('flex');
+            modal.classList.remove('hidden');
+        }
+
+        function closeImageViewerBtn() {
+            const modal = document.getElementById('imageViewerModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function closeImageViewer(event) {
+            if (event.target.id === 'imageViewerModal') {
+                const modal = document.getElementById('imageViewerModal');
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        }
+
+        // MOBILE MENU TOGGLE FUNCTION
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('menuIcon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        }
+
+        // AUTO OPEN ENQUIRY POPUP AFTER 30 SECONDS
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                openModal('enquiryModal');
+            }, 30000);
+        });
+
+        // DUAL SUBMISSION FUNCTION
+        async function handleDualSubmission(event, nameId, phoneId, queryId, formSubject) {
+            event.preventDefault();
+
+            const name = document.getElementById(nameId).value;
+            const phone = document.getElementById(phoneId).value;
+            const queryOrBatch = document.getElementById(queryId).value;
+
+            const accessKey = (nameId === 'heroName') 
+                ? document.getElementById('hero_access_key').value 
+                : document.getElementById('modal_access_key').value;
+
+            const formData = new FormData();
+            formData.append("access_key", accessKey);
+            formData.append("subject", `${formSubject} - AIEL Balaganj`);
+            formData.append("Name", name);
+            formData.append("Phone", phone);
+            formData.append("Selected_Option", queryOrBatch);
+
+            try {
+                fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    body: formData
+                });
+            } catch (err) {
+                console.log("Email background sending error:", err);
+            }
+
+            const whatsappText = `Hi AIEL Balaganj Team,%0A%0AI have submitted an enquiry on your website:%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Details/Batch:* ${encodeURIComponent(queryOrBatch)}`;
+            
+            if (nameId === 'modalName') {
+                closeModal('enquiryModal');
+            }
+
+            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappText}`, '_blank');
+        }
+
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 0.5;
+                this.speedX = Math.random() * 0.5 - 0.25;
+                this.speedY = Math.random() * 0.5 - 0.25;
+                this.opacity = Math.random() * 0.5 + 0.2;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x > canvas.width) this.x = 0;
+                if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                if (this.y < 0) this.y = canvas.height;
+            }
+            draw() {
+                ctx.fillStyle = `rgba(250, 204, 21, ${this.opacity})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < 60; i++) {
+            particles.push(new Particle());
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
+
+        function openModal(id) { document.getElementById(id).classList.add('flex'); document.getElementById(id).classList.remove('hidden'); }
+        function closeModal(id) { document.getElementById(id).classList.add('hidden'); document.getElementById(id).classList.remove('flex'); }
+
+        function handleOutsideClick(event) {
+            if (event.target.id === 'enquiryModal') {
+                closeModal('enquiryModal');
+            }
+        }
+    </script>
+</body>
+</html>
